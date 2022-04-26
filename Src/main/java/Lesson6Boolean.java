@@ -4,10 +4,8 @@ public class Lesson6Boolean {
     public static void main(String [] args){
         int i = 6;
         int j = 7;
-        int d = i % 2;
-        int y = j % 2;
         boolean evenNumber;
-        if(d < 1){
+        if(i%2==0){
             evenNumber = true;
         } else {
             evenNumber = false;
@@ -15,7 +13,7 @@ public class Lesson6Boolean {
         System.out.println(evenNumber);
 
         boolean notEvenNumber;
-        if(y < 0){
+        if(j%2==0){
             notEvenNumber = true;
         } else {
             notEvenNumber = false;
