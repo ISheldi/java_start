@@ -11,13 +11,13 @@ public class Lesson6Boolean {
             evenNumber = false;
         }
         System.out.println(evenNumber);
-
-        boolean notEvenNumber;
         if(j%2==0){
-            notEvenNumber = true;
+            evenNumber = true;
         } else {
-            notEvenNumber = false;
+            evenNumber = false;
         }
-        System.out.println(notEvenNumber);
+        System.out.println(evenNumber);
+
+
     }
 }
