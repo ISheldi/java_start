@@ -1,5 +1,7 @@
 package ua.com.foxminded.motorcyclemanager;
 
+import java.util.Objects;
+
 public class Motorcycle {
     String name;
     int yearOfProduction;
@@ -30,5 +32,18 @@ public class Motorcycle {
                 ", engineType='" + engineType + '\'' +
                 ", isReadyToDrive=" + isReadyToDrive +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Motorcycle)) return false;
+        Motorcycle that = (Motorcycle) o;
+        return color == that.color && engineType.equals(that.engineType) && isReadyToDrive.equals(that.isReadyToDrive);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(color, engineType, isReadyToDrive);
     }
 }
