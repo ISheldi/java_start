@@ -5,11 +5,11 @@ public class Motorcycle {
     int yearOfProduction;
     int price;
     int weight;
-    String color;
+    Color color;
     String engineType;
-    String isReadyToDrive;
+    Boolean isReadyToDrive;
 
-    public Motorcycle(String name, int yearOfProduction, int price, int weight, String color, String engineType, String isReadyToDrive) {
+    public Motorcycle(String name, int yearOfProduction, int price, int weight, Color color, String engineType, Boolean isReadyToDrive) {
         this.name = name;
         this.yearOfProduction = yearOfProduction;
         this.price = price;
@@ -21,6 +21,14 @@ public class Motorcycle {
 
     @Override
     public String toString() {
-        return "Motorcycle{" + "name='" + name + '\'' + ", yearOfProduction=" + yearOfProduction + ", price=" + price + ", weight=" + weight + ", color='" + color + '\'' + ", engineType='" + engineType + '\'' + ", isReadyToDrive='" + isReadyToDrive + '\'' + '}';
+        return "Motorcycle{" +
+                "name='" + name + '\'' +
+                ", yearOfProduction=" + yearOfProduction +
+                ", price=" + price +
+                ", weight=" + weight +
+                ", color=" + color +
+                ", engineType='" + engineType + '\'' +
+                ", isReadyToDrive=" + isReadyToDrive +
+                '}';
     }
 }
