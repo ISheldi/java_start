@@ -10,6 +10,7 @@ public class Motorcycle {
     Color color;
     String engineType;
     Boolean isReadyToDrive;
+    private int distance = 0;
 
     public Motorcycle(String name, int yearOfProduction, int price, int weight, Color color, String engineType, Boolean isReadyToDrive) {
         this.name = name;
@@ -21,6 +22,30 @@ public class Motorcycle {
         this.isReadyToDrive = isReadyToDrive;
     }
 
+    public void addDistance(int additinalDistance){
+        distance += additinalDistance;
+    }
+
+    public int getDistance() {
+        return distance;
+    }
+
+    public void setDistance(int distance) {
+        this.distance = distance;
+    }
+
+    public void repair (){
+        this.isReadyToDrive = true;
+    }
+    public void destroyEngine (){
+        this.isReadyToDrive = false;
+    }
+
+    public void changeColor(Color color){
+        this.color = color;
+    }
+
+
     @Override
     public String toString() {
         return "Motorcycle{" +
@@ -31,6 +56,7 @@ public class Motorcycle {
                 ", color=" + color +
                 ", engineType='" + engineType + '\'' +
                 ", isReadyToDrive=" + isReadyToDrive +
+                ", distance=" + distance +
                 '}';
     }
 
@@ -39,7 +65,7 @@ public class Motorcycle {
         if (this == o) return true;
         if (!(o instanceof Motorcycle)) return false;
         Motorcycle that = (Motorcycle) o;
-        return color == that.color && engineType.equals(that.engineType) && isReadyToDrive.equals(that.isReadyToDrive);
+        return color == that.color && distance == that.distance && isReadyToDrive.equals(that.isReadyToDrive);
     }
 
     @Override
