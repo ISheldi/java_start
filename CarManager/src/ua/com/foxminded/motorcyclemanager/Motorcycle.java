@@ -25,6 +25,9 @@ public class Motorcycle {
     public void addDistance(int additinalDistance){
         distance += additinalDistance;
     }
+    public void addDistance(float additinalDistance){
+        distance += Math.round(additinalDistance);
+    }
 
     public int getDistance() {
         return distance;
